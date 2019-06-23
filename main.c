@@ -16,7 +16,7 @@ int main()
     FILE *q;
     if((a=fopen("/Users/wangjing/Desktop/student1.csv","r"))==0)
     {
-        printf("Êñá‰ª∂‰∏çÂ≠òÂú®\n");
+        printf("文件不存在\n");
     }
     else
     {
@@ -48,7 +48,7 @@ int main()
         {
             for(j=6;j<11;j++)
             {
-                c[i][j]=atoi(b[i][j]);
+                c[i][j]=(b[i][j]);
             }
         }
         for(i=1;i<n;i++)

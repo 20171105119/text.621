@@ -82,7 +82,7 @@ int main()
             fprintf(q,"%s   ",b[i][j]);
         }
     }
-    fprintf(q,"\n");
+    //fprintf(q,"\n");
     for(i=1;i<n;i++)
     {
         for(j=6;j<11;j++)

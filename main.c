@@ -27,6 +27,7 @@ int main()
         {
             n++;
         }
+        //n列数
         fclose(p);
         
         for(i=0;i<n;i++)
@@ -48,23 +49,24 @@ int main()
         {
             for(j=6;j<11;j++)
             {
-                c[i][j]=(b[i][j]);
+                c[i][j]=atoi(b[i][j]);
             }
         }
         for(i=1;i<n;i++)
         {
+            max = min = c[i][6];
             for(j=6;j<11;j++)
             {
-                if(c[i][j]>=max)
+                if(c[i][j]>max)
                     max=c[i][j];
-                if(c[i][j]<=min)
+                if(c[i][j]<min)
                     min=c[i][j];
                 allscore+=c[i][j];
             }
             j=0;
             lastscore=allscore-min-max;
             average=lastscore/3;
-            printf("%s  ",b[i][j+1]);
+            printf("%s ",b[i][j+1]);
             printf("average=%d\n",average);
             lastscore=0;
             average=0;
@@ -79,10 +81,11 @@ int main()
         for(j=0;j<11;j++)
         {
             
-            fprintf(q,"%s   ",b[i][j]);
+            fprintf(q,"%s,",b[i][j]);
         }
     }
     //fprintf(q,"\n");
+    fprintf(q,"\n");
     for(i=1;i<n;i++)
     {
         for(j=6;j<11;j++)
@@ -96,7 +99,6 @@ int main()
         j=0;
         lastscore=allscore-min-max;
         average=lastscore/3;
-        fprintf(q,"%s  ",b[i][j+1]);
         fprintf(q,"average=%d\n",average);
         lastscore=0;
         average=0;
